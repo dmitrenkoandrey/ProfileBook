@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VfqJ8eoFLHP5c2wVdqOf6Yn3fMxyGoKxjS0HuExjkubXQOXB8PQK3K0QxeLKceWq0mJkjb3WZLKb6skFr8qpDw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\ProfileBook\\ProfileBook\\ProfileBook.iOS\\ProfileBook.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+  ],
+  "logs": []
+}
