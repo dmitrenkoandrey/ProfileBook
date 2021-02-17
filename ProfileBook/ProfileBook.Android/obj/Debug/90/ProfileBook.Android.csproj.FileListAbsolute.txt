@@ -63,6 +63,7 @@ C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\90\android\assets\mscorlib.dll
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\90\android\assets\mscorlib.pdb
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\90\android\assets\netstandard.dll
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\90\android\assets\ProfileBook.Android.dll
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\90\android\assets\ProfileBook.Android.pdb
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\90\android\assets\ProfileBook.dll

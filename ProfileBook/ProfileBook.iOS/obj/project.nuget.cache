@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VfqJ8eoFLHP5c2wVdqOf6Yn3fMxyGoKxjS0HuExjkubXQOXB8PQK3K0QxeLKceWq0mJkjb3WZLKb6skFr8qpDw==",
+  "dgSpecHash": "hywuV0geI/EcHom+8Q2dbgtha4B4uRRAhdkYjcwZXjRCeVPA3gwW3CpgafrtiLTWef7MUcd86fTK9JwsIscgBw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\ProfileBook\\ProfileBook\\ProfileBook.iOS\\ProfileBook.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.1-beta1\\newtonsoft.json.13.0.1-beta1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
   ],
