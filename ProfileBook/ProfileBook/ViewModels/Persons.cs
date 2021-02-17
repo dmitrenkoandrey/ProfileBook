@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
-
+using ProfileBook.ViewModels;
 using ProfileBook.Models;
 
 namespace ProfileBook.TreeView
 {
-    public class Employee : INotifyPropertyChanged, IPersons, ITreeItem
+    public class Persons : INotifyPropertyChanged, IPersons, ITreeItem
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Employee()
+        public Persons()
         {
             Id = Guid.NewGuid();
         }
@@ -128,58 +128,33 @@ namespace ProfileBook.TreeView
 
         public bool IsPhoneExist { get { return !string.IsNullOrEmpty(phone); } }
 
-        //private Department department;
-        //public Department Department
-        //{
-        //    get { return department; }
-        //    set
-        //    {
-        //        if (department == null && value != null
-        //            || department != null && value == null
-        //            || department != null && value != null)
-        //        {
-        //            department = value;
-        //            OnPropertyChanged("Department");
-        //            OnPropertyChanged("DepartmentName");
-        //        }
-        //    }
-        //}
-        //public string DepartmentName
-        //{
-        //    get
-        //    {
-        //        if (Department != null) return Department.Name;
-        //        return "";
-        //    }
-        //}
-
+        
         public string Name
         {
             get { return string.Format("{0} {1}", firstName, lastName); }
             set { }
         }
 
-        //public void SetEmployee(Employee employee)
-        //{
-        //    Id = employee.Id;
-        //    UserName = employee.UserName;
-        //    FirstName = employee.FirstName;
-        //    LastName = employee.LastName;
-        //    EMail = employee.EMail;
-        //    DateOfBirth = employee.DateOfBirth;
-        //    Department = employee.Department;
-        //    Phone = employee.Phone;
-        //}
+        public void SetPerson(Persons person)
+        {
+            Id = person.Id;
+            UserName = person.UserName;
+            FirstName = person.FirstName;
+            LastName = person.LastName;
+            EMail = person.EMail;
+            DateOfBirth = person.DateOfBirth;
+            Phone = person.Phone;
+        }
 
         protected void OnPropertyChanged(string propName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
 
-        //public override string ToString()
-        //{
-        //    return string.Format("Login: {0}\nName: {1}\ne-mail: {2}\nDate of birth: {3}\nDepartment: {4}", UserName, FirstName + LastName, EMail, DateOfBirth.ToString("dd-MM-yyyy"), DepartmentName);
-        //}
+        public override string ToString()
+        {
+            return string.Format("Login: {0}\nName: {1}\ne-mail: {2}\nDate of birth: {3}", UserName, FirstName + LastName, EMail, DateOfBirth.ToString("dd-MM-yyyy"));
+        }
     }
 }
 

@@ -13,3 +13,4 @@ C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\bin\Debug\netstan
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\bin\Debug\netstandard2.0\ref\ProfileBook.dll
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\bin\Debug\netstandard2.0\ProfileBook.pdb
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstandard2.0\ProfileBook.csprojAssemblyReference.cache
