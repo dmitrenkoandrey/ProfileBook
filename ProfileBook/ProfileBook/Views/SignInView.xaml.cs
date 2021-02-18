@@ -34,11 +34,30 @@ namespace ProfileBook.Views
             try
             {
                 IsBusy = true;
-                var aServ = new AccountService(App.EndPoint, "");
-                App.Tocken = await aServ.Login(userLogin);
+                //var aServ = new AccountService(App.EndPoint, "");
+                //
+              //App.Pwd = await aServ.Login(userLogin);
                 IsBusy = false;
-                //Navigation.InsertPageBefore(new MainListView(), this);
-                //await Navigation.PopAsync();
+                
+                Navigation.InsertPageBefore(new MainListView(), this);
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+                //IsBusy = false;
+            }
+        }
+        private async void btnLogup_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                IsBusy = true;
+                //var aServ = new AccountService(App.EndPoint, "");
+                //
+                //App.Pwd = await aServ.Login(userLogin);
+                IsBusy = false;
+                Navigation.InsertPageBefore(new SignUpView(), this);
+                await Navigation.PopAsync();
             }
             catch (Exception ex)
             {

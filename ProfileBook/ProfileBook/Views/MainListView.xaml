@@ -9,7 +9,7 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
             <Image Source="logo.png"></Image>
-            <Label Text="MetInvest main page" FontSize="16" TextColor="Black" VerticalTextAlignment="Center" />
+            <Label Text="MetInvest main page" FontSize="24" TextColor="Black" VerticalTextAlignment="Center" />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
