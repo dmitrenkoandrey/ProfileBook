@@ -20,7 +20,7 @@ namespace ProfileBook.Views
         private UserLogin userLogin;
         public SignInView()
         {
-            userLogin = new UserLogin() { UserName = "user" };
+            userLogin = new UserLogin() { UserName = "" };
             InitializeComponent();
             BindingContext = this;
 

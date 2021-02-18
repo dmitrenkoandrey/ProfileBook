@@ -17,7 +17,7 @@
             <Label Text="Enter to the program" />
 
             <Label  Text="Login name" />
-            <Entry x:Name="entLoginName" Placeholder="Login name" />
+            <Entry x:Name="entLoginName" Placeholder="Login" />
             <Label  Text="Password" />
             <Entry x:Name="entPassword" Placeholder="Password" IsPassword="True" />
             <Button x:Name="btnLogin" Text="Log on" FontAttributes="Bold"  BackgroundColor="Pink" Clicked="btnLogin_Clicked"  />
