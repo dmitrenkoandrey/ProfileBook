@@ -14,6 +14,6 @@ C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstan
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstandard2.0\ProfileBook.dll
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstandard2.0\ref\ProfileBook.dll
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstandard2.0\ProfileBook.pdb
-C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstandard2.0\ProfileBook.csprojAssemblyReference.cache
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstandard2.0\Views\SettingsView.xaml.g.cs
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstandard2.0\Views\AddEditProfileView.xaml.g.cs
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook\obj\Debug\netstandard2.0\ProfileBook.csprojAssemblyReference.cache

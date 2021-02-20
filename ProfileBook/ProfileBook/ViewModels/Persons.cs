@@ -84,15 +84,15 @@ namespace ProfileBook.TreeView
             }
         }
 
-        private DateTime dateOfBirth;
-        public DateTime DateOfBirth
+        private DateTime dateOfReg; //Date of Registration
+        public DateTime DateOfReg
         {
-            get { return dateOfBirth; }
+            get { return dateOfReg; }
             set
             {
-                if (dateOfBirth != value)
+                if (dateOfReg != value)
                 {
-                    dateOfBirth = value;
+                    dateOfReg = value;
                     OnPropertyChanged("DateOfBirth");
                 }
             }
@@ -130,7 +130,7 @@ namespace ProfileBook.TreeView
             FirstName = person.FirstName;
             LastName = person.LastName;
             EMail = person.EMail;
-            DateOfBirth = person.DateOfBirth;
+            DateOfReg = person.DateOfReg;
             Phone = person.Phone;
         }
 
@@ -141,7 +141,7 @@ namespace ProfileBook.TreeView
 
         public override string ToString()
         {
-            return string.Format("Login: {0}\nName: {1}\ne-mail: {2}\nDate of birth: {3}", UserName, FirstName + LastName, EMail, DateOfBirth.ToString("dd-MM-yyyy"));
+            return string.Format("Login: {0}\nName: {1}\ne-mail: {2}\nDate of Registration: {3}", UserName, FirstName + LastName, EMail, DateOfReg.ToString("dd-MM-yyyy"));
         }
     }
 }
