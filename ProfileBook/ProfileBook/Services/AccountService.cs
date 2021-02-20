@@ -59,7 +59,7 @@ namespace ProfileBook.Service
             return true;
         }
 
-       // public async Task<Employee> getUserInfo()
+       // public async Task<Person> getUserInfo()
        // {
             //var args = new Dictionary<string, object>();
             //return await InvokeAsync<string>("getUserInfo", args);
@@ -80,11 +80,6 @@ namespace ProfileBook.Service
                   //  Phone = "061 747 77 77"
                 //};
 
-                //empl.Department = new Department() { Id = Guid.NewGuid(), Name = "IT Department of promising developments in Microsoft technologies" };
-
-              //  return empl;
-            //});
-            //return userInfo;
-        //}
+                
     }
 }

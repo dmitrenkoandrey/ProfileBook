@@ -13,12 +13,6 @@
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
-        <!--<ToolbarItem x:Name="employeesItem" Text="Users"  Order="Primary" Priority="1"></ToolbarItem>-->
-        <!--<ToolbarItem x:Name="departmentItem" Text="Departments" Clicked="OnDepartmentItemClicked" Order="Primary" Priority="2"></ToolbarItem>-->
-        <!--<ToolbarItem x:Name="reportItem" Text="Reports" Clicked="OnReportItemClicked" Order="Secondary" Priority="3"></ToolbarItem>-->
-        <!--<ToolbarItem x:Name="reportItem2" Text="Reports2" Clicked="reportItem2_Clicked" Order="Secondary" Priority="4"></ToolbarItem>
-        <ToolbarItem x:Name="userInfoItem" Text="My info" Clicked="OnUserInfoItemClicked" Order="Secondary" Priority="5"></ToolbarItem>-->
-        <!--<ToolbarItem x:Name="exitItem" Text="Exit" Clicked="OnExitItemClicked" Order="Primary" Priority="1"></ToolbarItem>-->
         <ToolbarItem x:Name="logoutItem" Text="Logout" Clicked="OnLogoutItemClicked" Order="Primary" Priority="1"></ToolbarItem>
         <ToolbarItem x:Name="settingsItem" Text="Settings" Clicked="OnSettingsItemClicked" Order="Primary" Priority="1"></ToolbarItem>
     </ContentPage.ToolbarItems>
