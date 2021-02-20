@@ -7,7 +7,7 @@ using ProfileBook.Models;
 
 namespace ProfileBook.TreeView
 {
-    public class Persons : INotifyPropertyChanged, IPersons, ITreeItem
+    public class Persons : INotifyPropertyChanged, IPersons
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -112,19 +112,7 @@ namespace ProfileBook.TreeView
             }
         }
 
-        private double performance;
-        public double Performance
-        {
-            get { return performance; }
-            set
-            {
-                if (performance != value)
-                {
-                    performance = value;
-                    OnPropertyChanged("Performance");
-                }
-            }
-        }
+      
 
         public bool IsPhoneExist { get { return !string.IsNullOrEmpty(phone); } }
 

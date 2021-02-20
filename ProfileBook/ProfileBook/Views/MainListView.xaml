@@ -4,31 +4,65 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ProfileBook.Views.MainListView"
-             >
+             x:Class="ProfileBook.Views.MainListView">
+
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
             <Image Source="logo.png"></Image>
-            <Label Text="MetInvest main page" FontSize="24" TextColor="Black" VerticalTextAlignment="Center" />
+            <Label Text="Main page" FontSize="24" TextColor="Black" VerticalTextAlignment="Center" />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
-        <!--<ToolbarItem x:Name="employeesItem" Text="Users" Clicked="OnEmployeeItemClicked" Order="Primary" Priority="1"></ToolbarItem>-->
+        <!--<ToolbarItem x:Name="employeesItem" Text="Users"  Order="Primary" Priority="1"></ToolbarItem>-->
         <!--<ToolbarItem x:Name="departmentItem" Text="Departments" Clicked="OnDepartmentItemClicked" Order="Primary" Priority="2"></ToolbarItem>-->
         <!--<ToolbarItem x:Name="reportItem" Text="Reports" Clicked="OnReportItemClicked" Order="Secondary" Priority="3"></ToolbarItem>-->
         <!--<ToolbarItem x:Name="reportItem2" Text="Reports2" Clicked="reportItem2_Clicked" Order="Secondary" Priority="4"></ToolbarItem>
-        <ToolbarItem x:Name="userInfoItem" Text="My info" Clicked="OnUserInfoItemClicked" Order="Secondary" Priority="5"></ToolbarItem>
-        <ToolbarItem x:Name="exitItem" Text="Exit" Clicked="OnExitItemClicked" Order="Secondary" Priority="5"></ToolbarItem>-->
+        <ToolbarItem x:Name="userInfoItem" Text="My info" Clicked="OnUserInfoItemClicked" Order="Secondary" Priority="5"></ToolbarItem>-->
+        <!--<ToolbarItem x:Name="exitItem" Text="Exit" Clicked="OnExitItemClicked" Order="Primary" Priority="1"></ToolbarItem>-->
+        <ToolbarItem x:Name="logoutItem" Text="Logout" Clicked="OnLogoutItemClicked" Order="Primary" Priority="1"></ToolbarItem>
+        <ToolbarItem x:Name="settingsItem" Text="Settings" Clicked="OnSettingsItemClicked" Order="Primary" Priority="1"></ToolbarItem>
     </ContentPage.ToolbarItems>
+    <!--<ScrollView>-->
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <StackLayout HorizontalOptions="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
-            <Label x:Name="lblWelcome" Text="Welcome to Metinvest Digital!" 
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-        <StackLayout IsVisible="{Binding IsBusy}" Padding="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="#7FC0C0C0">
+        
+            <StackLayout HorizontalOptions="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <Label x:Name="lblWelcome" Text="Welcome to Metinvest Digital!" />
+                <!--HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand" />-->
+                <Label x:Name="lblWelcome1" Text="Welcome1 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome2" Text="Welcome2 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome3" Text="Welcome3 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome4" Text="Welcome4 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome5" Text="Welcome5 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome6" Text="Welcome6 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome7" Text="Welcome7 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome8" Text="Welcome8 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome9" Text="Welcome9 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome10" Text="Welcome10 to Metinvest Digital!" />
+                <Label x:Name="lblWelcome11" Text="Welcome to Metinvest Digital!" />
+                <Label x:Name="lblWelcome12" Text="Welcome to Metinvest Digital!" />
+                <Label x:Name="lblWelcome13" Text="Welcome to Metinvest Digital!" />
+                <Label x:Name="lblWelcome14" Text="Welcome to Metinvest Digital!" />
+                <Label x:Name="lblWelcome15" Text="Welcome to Metinvest Digital!" />
+                <Label x:Name="lblWelcome16" Text="Welcome to Metinvest Digital!" />
+                <Label x:Name="lblWelcome17" Text="Welcome to Metinvest Digital!" />
+                <Label x:Name="lblWelcome18" Text="Welcome to Metinvest Digital!" />
+                <Label x:Name="lblWelcome19" Text="Welcome to Metinvest Digital!" />
+                <Label x:Name="lblWelcome20" Text="Welcome to Metinvest Digital!" />
+
+            </StackLayout>
+            <StackLayout IsVisible="{Binding IsBusy}" Padding="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="#7FC0C0C0">
             <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
             <Label Text="Loading..." HorizontalOptions="Center" />
         </StackLayout>
+            <AbsoluteLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <ImageButton Source="circle.png" Clicked="OnEditProfileItemClicked" Margin="20, 40"/>
+            </AbsoluteLayout>
+        <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"  AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            
+        </StackLayout>
     </AbsoluteLayout>
+    <!--</ScrollView>-->
+
+
 </ContentPage>

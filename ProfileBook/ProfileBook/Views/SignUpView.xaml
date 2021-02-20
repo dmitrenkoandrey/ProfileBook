@@ -8,7 +8,7 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
             <Image Source="user26.png"></Image>
-            <Label Text="Username Registration" FontSize="24" TextColor="Black" VerticalTextAlignment="Center" />
+            <Label Text="Users SignUp" FontSize="24" TextColor="Black" VerticalTextAlignment="Center" />
         </StackLayout>
     </NavigationPage.TitleView>
     <!--<Label Text="Создание новой учетной записи" FontSize="22" TextColor="Black" VerticalTextAlignment="Center" />-->
@@ -17,14 +17,13 @@
                      AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
             <!--<Label Text="Username Registration" />-->
             <Label  Text="New Login name" />
-            <Entry x:Name="entnewLoginName" Placeholder="NewLogin name" />
+            <Entry x:Name="entnewLoginName" Placeholder="New Login" />
             <Label  Text="New Password" />
-            <Entry x:Name="entnewPassword" Placeholder="NewPassword" IsPassword="True" />
+            <Entry x:Name="entnewPassword" Placeholder="New Password" IsPassword="True" />
             <Label  Text="Confirmation of Password" />
             <Entry x:Name="entconfPassword" Placeholder="ConfPassword" IsPassword="True" />
 
-            <Button x:Name="btnReg" Text="Registration" FontAttributes="Bold"  BackgroundColor="Aqua" Clicked="btnLogup_Clicked"  />
-            <Button x:Name="exitReg" Text="Cancel" FontAttributes="Bold" BackgroundColor="Red" Clicked="btnCancel_Clicked"  />
+            <Button x:Name="btnReg" Text="SIGN UP" FontAttributes="Bold" FontSize="20"  BackgroundColor="Aqua" Clicked="btnLogup_Clicked"  />
         </StackLayout>
         <StackLayout IsVisible="{Binding IsBusy}" Padding="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="#CCC0C0C0">
             <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />

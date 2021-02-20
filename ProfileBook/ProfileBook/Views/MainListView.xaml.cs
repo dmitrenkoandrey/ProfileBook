@@ -27,8 +27,9 @@ namespace ProfileBook.Views
             //employeesItem.IconImageSource = ImageSource.FromFile("user26.png");
             //departmentItem.IconImageSource = ImageSource.FromFile("Department26.png");
             //reportItem.IconImageSource = ImageSource.FromFile("reports24.png");
-            //exitItem.IconImageSource = ImageSource.FromFile("exit26.png");
-
+            //exitItem.IconImageSource = ImageSource.FromFile("exit_logup2.png");
+            logoutItem.IconImageSource = ImageSource.FromFile("logout.png");
+            settingsItem.IconImageSource = ImageSource.FromFile("settings.png");
             BindingContext = this;
 
             IsBusy = false;
@@ -59,8 +60,19 @@ namespace ProfileBook.Views
             IsBusy = false;
         }
 
+        async void OnLogoutItemClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignInView());
+        }
 
-
+        async void OnSettingsItemClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SettingsView());
+        }
+        async void OnEditProfileItemClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddEditProfileView());
+        }
         //async void OnEmployeeItemClicked(object sender, EventArgs e)
         //{
         //    await Navigation.PushAsync(new EmployeePage());
