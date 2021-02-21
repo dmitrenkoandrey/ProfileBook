@@ -1,3 +1,11 @@
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\optimized\
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\ProfileBook.iOS.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\ProfileBook.iOS.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\bin\iPhone\Debug\ProfileBook.iOS.exe
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\bin\iPhone\Debug\ProfileBook.iOS.pdb
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\bin\iPhone\Debug\Newtonsoft.Json.dll
@@ -54,14 +62,6 @@ C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\bin\iPhone\De
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\bin\iPhone\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\bin\iPhone\Debug\ProfileBook.dll
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\bin\iPhone\Debug\ProfileBook.pdb
-C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
-C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
-C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
-C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
-C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
-C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\optimized\
-C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\ProfileBook.iOS.csprojAssemblyReference.cache
-C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\ProfileBook.iOS.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\ProfileBook.iOS.csproj.CopyComplete
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\ProfileBook.iOS.exe
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.iOS\obj\iPhone\Debug\ProfileBook.iOS.pdb
