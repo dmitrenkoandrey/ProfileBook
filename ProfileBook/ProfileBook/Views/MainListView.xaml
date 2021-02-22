@@ -59,17 +59,22 @@
             <!--<Button Text="Добавить" Command="{Binding CreatePersonCommand}" />-->
         <!--<ImageButton Source="circle.png" Command="{Binding CreatePersonCommand}" />--><!--Margin="320, 480"-->
         <ListView x:Name="booksList" ItemsSource="{Binding Persons}"
-              SelectedItem="{Binding SelectedFriend, Mode=TwoWay}" HasUnevenRows="True">
+              SelectedItem="{Binding SelectedPerson, Mode=TwoWay}" HasUnevenRows="True"
+                  GroupDisplayBinding="{Binding Title}" >
+            
                 <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
+                <DataTemplate>
+                    <ViewCell>
                             <ViewCell.View>
-                                <StackLayout>
-                                    <Label Text="{Binding Name}" FontSize="Medium" />
-                                    <Label Text="{Binding Email}" FontSize="Small" />
-                                    <Label Text="{Binding Phone}" FontSize="Small" />
-                                </StackLayout>
-                            </ViewCell.View>
+                            <StackLayout>
+                                <Image Source="{Binding ProfileImage}" HorizontalOptions="Start"/>
+                                <Label Text="{Binding Name}" FontSize="Medium" />
+                                <Label Text="{Binding Email}" FontSize="Small" />
+                                <Label Text="{Binding Phone}" FontSize="Small" />
+                                <BoxView HeightRequest="1" Color="Red" IsVisible="{Binding IsSeparatorVisible}"/>
+                            </StackLayout>
+                            
+                        </ViewCell.View>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

@@ -598,3 +598,5 @@ C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\100\stamp\_GenerateJavaStubs.stamp
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\100\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\100\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\100\res\drawable\pic_profile.png
+C:\Users\user\source\repos\ProfileBook\ProfileBook\ProfileBook.Android\obj\Debug\100\res\drawable\person1.png
