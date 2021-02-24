@@ -32,11 +32,11 @@ namespace ProfileBook.Views
           await  DisplayAlert("Регистрация", "Регистрация прошла успешно!", "ОK");
             try
             {
-                IsBusy = true;
+                //IsBusy = true;
                 //var aServ = new AccountService(App.EndPoint, "");
                 //
                 //App.Pwd = await aServ.Login(userLogin);
-                IsBusy = false;
+               // IsBusy = false;
 
                 Navigation.InsertPageBefore(new SignInView(), this);
                 await Navigation.PopAsync();

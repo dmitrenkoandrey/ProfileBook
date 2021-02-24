@@ -10,14 +10,15 @@ using ProfileBook.Models;
 using ProfileBook.Service;
 using ProfileBook.TreeView;
 using ProfileBook.ViewModels;
-
 namespace ProfileBook.Views
 {
     [DesignTimeVisible(false)]
     public partial class MainListView : ContentPage
     {
+        private string regDate = DateTime.Now.ToString();
         public MainListView()
         {
+           
             InitializeComponent();
             logoutItem.IconImageSource = ImageSource.FromFile("logout.png");
             settingsItem.IconImageSource = ImageSource.FromFile("settings.png");

@@ -16,6 +16,7 @@ namespace ProfileBook.TreeView
         public PersonViewModel()
         {
             Person = new Person();
+            Person.RegDate = DateTime.Now.ToString();
         }
 
         public PersonsListViewModel ListViewModel
@@ -91,19 +92,8 @@ namespace ProfileBook.TreeView
                 }
             }
         }
-        public string Phone
-        {
-            get { return Person.Phone; }
-            set
-            {
-                if (Person.Phone != value)
-                {
-                    Person.Phone = value;
-                    OnPropertyChanged("Phone");
-                }
-            }
-        }
-        public DateTime RegDate
+    
+        public string RegDate
         {
             get { return Person.RegDate; }
             set
@@ -116,28 +106,14 @@ namespace ProfileBook.TreeView
             }
         }
 
-        public string Email
-        {
-            get { return Person.Email; }
-            set
-            {
-                if (Person.Email != value)
-                {
-                    Person.Email = value;
-                    OnPropertyChanged("Email");
-                }
-            }
-        }
+
         public bool IsValid
         {
             get
             {
                 return ((!string.IsNullOrEmpty(NickName.Trim())) ||
                     (!string.IsNullOrEmpty(Name.Trim())) ||
-                    (!string.IsNullOrEmpty(Email.Trim())) ||
-                    (!string.IsNullOrEmpty(ProfileImage.Trim())) ||
-                    (!string.IsNullOrEmpty(Description.Trim())) ||
-                    (!string.IsNullOrEmpty(Phone.Trim())));
+                    (!string.IsNullOrEmpty(Description.Trim())));
             }
         }
         protected void OnPropertyChanged(string propName)

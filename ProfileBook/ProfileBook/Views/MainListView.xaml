@@ -17,36 +17,37 @@
         <ToolbarItem x:Name="settingsItem" Text="Settings" Clicked="OnSettingsItemClicked" Order="Primary" Priority="1"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <!--<ScrollView>-->
-    
-        <StackLayout>
-            <!--<Button Text="Добавить" Command="{Binding CreatePersonCommand}" />-->
-        <!--<ImageButton Source="circle.png" Command="{Binding CreatePersonCommand}" />--><!--Margin="320, 480"-->
+    <StackLayout>
+        <!--<Button Text="Добавить" Command="{Binding CreatePersonCommand}" />-->
+        <!--<ImageButton Source="circle.png" Command="{Binding CreatePersonCommand}" />-->
+        <!--Margin="320, 480"-->
         <ListView x:Name="booksList" ItemsSource="{Binding Persons}"
-              SelectedItem="{Binding SelectedPerson, Mode=TwoWay}" HasUnevenRows="True"
-                  GroupDisplayBinding="{Binding Title}" >
-            
-                <ListView.ItemTemplate>
+            SelectedItem="{Binding SelectedPerson, Mode=TwoWay}" HasUnevenRows="True">
+            <!--GroupDisplayBinding="{Binding Title}" >-->
+
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                            <ViewCell.View>
-                            <StackLayout>
-                                <Image Source="{Binding ProfileImage}" HorizontalOptions="Start"/>
-                                <Label Text="{Binding Name}" FontSize="Medium" />
-                                <Label Text="{Binding Email}" FontSize="Small" />
-                                <Label Text="{Binding Phone}" FontSize="Small" />
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <!--<Image Source="{Binding ProfileImage}" HorizontalOptions="Start"/>-->
+                                <Image Source="person1" HorizontalOptions="Start"/>
+                                <StackLayout>
+                                    <Label Text="{Binding NickName}" FontSize="Large" />
+                                    <Label Text="{Binding Name}" FontSize="Medium" />
+                                    <Label Text="{Binding RegDate}" FontSize="Small" />
                                 <BoxView HeightRequest="1" Color="Red" IsVisible="{Binding IsSeparatorVisible}"/>
                             </StackLayout>
-                            
+                            </StackLayout>
                         </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <AbsoluteLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
-                <ImageButton Source="circle.png" Command="{Binding CreatePersonCommand}" Margin="20, 30"/>
-            </AbsoluteLayout>
-        </StackLayout>
-    <!--</AbsoluteLayout>-->
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <AbsoluteLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <ImageButton Source="circle.png" Command="{Binding CreatePersonCommand}" Margin="20, 30"/>
+        </AbsoluteLayout>
+    </StackLayout>
     <!--</ScrollView>-->
 
 

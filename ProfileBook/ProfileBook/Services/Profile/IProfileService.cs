@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProfileBook.Services.Profile
 {
-    class IProfileService
+    public  interface IProfileService
     {
     }
 }
