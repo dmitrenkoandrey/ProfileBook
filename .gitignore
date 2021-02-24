@@ -1,5 +1,6 @@
 #Myfile .gitignore
 #ignore-list of project files
-obj/*
-bin/*
-Debug/*
+obj
+bin
+Debug
+
