@@ -16,7 +16,7 @@ namespace ProfileBook.TreeView
         public PersonViewModel()
         {
             Person = new Person();
-            Person.RegDate = DateTime.Now.ToString();
+           //Person.RegDate = DateTime.Now.ToString();
         }
 
         public PersonsListViewModel ListViewModel

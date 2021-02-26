@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 using System;
 using System.IO;
 using Xamarin.Essentials;
-
+using ProfileBook.Services;
+using ProfileBook.Models;
 
 namespace ProfileBook.ViewModels
 {
@@ -16,12 +17,11 @@ namespace ProfileBook.ViewModels
     public class PersonsListViewModel : INotifyPropertyChanged
     {
         public Image Img { protected set; get; }
-        // AddEditProfileView addedit = new AddEditProfileView();
-        
+        public Validator valid = new Validator();
         public ObservableCollection<PersonViewModel> Persons { get; set; }
-        public static bool IsBusy1 { protected set; get; }
+        public static bool IsBusy1 { set; get; }
         public event PropertyChangedEventHandler PropertyChanged;
-
+        public AddEditProfileView addedit = new AddEditProfileView();
         public ICommand CreatePersonCommand { protected set; get; }
         public ICommand DeletePersonCommand { protected set; get; }
         public ICommand SavePersonCommand { protected set; get; }
@@ -29,7 +29,6 @@ namespace ProfileBook.ViewModels
         public ICommand TakePhotoCommand { protected set; get; }
         public ICommand GetPhotoCommand { protected set; get; }
         PersonViewModel selectedPerson;
-
         public INavigation Navigation { get; set; }
 
         public PersonsListViewModel()
@@ -65,28 +64,31 @@ namespace ProfileBook.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
 
-        private void CreatePerson()
+        public void CreatePerson()
         {
-            Navigation.PushAsync(new AddEditProfileView(new PersonViewModel() { ListViewModel = this }));
+            Person person = new Person();
+            AddEditProfileView personPage = new AddEditProfileView();
+            personPage.BindingContext = person;
+            //Navigation.PushAsync(new AddEditProfileView(new PersonViewModel()));//{ ListViewModel = this }));
         }
         private void Back()
         {
             Navigation.PopAsync();
         }
-        private async void SavePerson(object personObject)
-        {
+        private async void SavePerson(object personObject) //отключен
+        {  
             PersonViewModel  person = personObject as PersonViewModel;
-            //if (person != null && person.IsValid && !Persons.Contains(person))//проверка валидации данных
+            if (person != null && person.IsValid && !Persons.Contains(person))//проверка валидации данных
             {
-               // page.DisplayAlert("Валидация", "Поля  заполнены!", "ОK");
+               // valid.ValidMessageAsync;  //"Валидация, Поля  заполнены!"
                 Persons.Add(person);
             }
-            //else
-            // {
-            //page.DisplayAlert("Валидация", "Поля не заполнены!", "ОK");
-            //Back();
+            else
+             {
+            
+            Back();
           
-            //}
+            }
 
            //Back();
           await  Navigation.PopAsync();
@@ -141,6 +143,7 @@ namespace ProfileBook.ViewModels
              await Navigation.PushAsync(new AddEditProfileView(new PersonViewModel() { ListViewModel = this }));
 
             }
+
             catch (Exception ex)
             {
                 //await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");

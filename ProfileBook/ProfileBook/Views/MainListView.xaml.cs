@@ -10,29 +10,53 @@ using ProfileBook.Models;
 using ProfileBook.Service;
 using ProfileBook.TreeView;
 using ProfileBook.ViewModels;
+using ProfileBook.Services.Repository;
+using ProfileBook.Views;
 namespace ProfileBook.Views
 {
     [DesignTimeVisible(false)]
     public partial class MainListView : ContentPage
     {
-        private string regDate = DateTime.Now.ToString();
+        //private string regDate = DateTime.Now.ToString();
         public MainListView()
         {
            
             InitializeComponent();
             logoutItem.IconImageSource = ImageSource.FromFile("logout.png");
             settingsItem.IconImageSource = ImageSource.FromFile("settings.png");
-           BindingContext = this;
-            BindingContext = new PersonsListViewModel() { Navigation = this.Navigation };
-            IsBusy = false;
+           //BindingContext = this;
+            //BindingContext = new PersonsListViewModel() { Navigation = this.Navigation };
+            //IsBusy = false;
         }
 
-        
+
 
         protected override void OnAppearing()
         {
+            string dbPath = DependencyService.Get<IPath>().GetDatabasePath(App.DBFILENAME);
+            using (ApplicationContext db = new ApplicationContext(dbPath))
+            {
+                personsList.ItemsSource = db.Persons.ToList();
+            }
             base.OnAppearing();
-            IsBusy = false;
+        }
+        // обработка нажатия элемента в списке
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Person selectedPerson = (Person)e.SelectedItem;
+            AddEditProfileView personPage = new AddEditProfileView();
+            personPage.BindingContext = selectedPerson;
+            await Navigation.PushAsync(personPage);
+        }
+        // обработка нажатия кнопки добавления
+        private async void CreatePerson(object sender, EventArgs e)
+        {
+            Person person = new Person();
+            AddEditProfileView personPage = new AddEditProfileView();
+            personPage.BindingContext = person;
+            person.RegDate = DateTime.Now.ToString();
+            
+            await Navigation.PushAsync(personPage);
         }
 
         async void OnLogoutItemClicked(object sender, EventArgs e)
