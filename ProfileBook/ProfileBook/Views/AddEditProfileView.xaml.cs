@@ -5,6 +5,8 @@ using Xamarin.Forms.Xaml;
 using ProfileBook.ViewModels;
 using ProfileBook.Services.Repository;
 using ProfileBook.Models;
+using Xamarin.Essentials;
+using System.IO;
 
 namespace ProfileBook.Views
 {
@@ -107,6 +109,30 @@ namespace ProfileBook.Views
             catch (Exception ex)
             {
                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
+            }
+        }
+        public async void TakePhotoAsync(object sender, EventArgs e)
+        {
+            try
+            {
+                var photo = await MediaPicker.CapturePhotoAsync(new MediaPickerOptions
+                {
+                    Title = $"xamarin.{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.png"
+                });
+
+                // для примера сохраняем файл в локальном хранилище
+                var newFile = Path.Combine(FileSystem.AppDataDirectory, photo.FileName);
+                using (var stream = await photo.OpenReadAsync())
+                using (var newStream = File.OpenWrite(newFile))
+                    await stream.CopyToAsync(newStream);
+
+                // загружаем в ImageView
+                Img.Source = ImageSource.FromFile(photo.FullPath);
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
         }
     }

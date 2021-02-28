@@ -27,8 +27,8 @@ namespace ProfileBook.Views
             //this.BindingContext = new PersonsListViewModel();
             logoutItem.IconImageSource = ImageSource.FromFile("logout.png");
             settingsItem.IconImageSource = ImageSource.FromFile("settings.png");
-            //BindingContext = this;
-            //BindingContext = new PersonsListViewModel() { Navigation = this.Navigation };
+            BindingContext = this;
+            BindingContext = new PersonsListViewModel() { Navigation = this.Navigation };
             //IsBusy = false;
 
         }

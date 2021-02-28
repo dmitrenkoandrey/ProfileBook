@@ -22,6 +22,7 @@
                     <ViewCell>
                         <ViewCell.ContextActions>
                             <MenuItem Text="Edit" Clicked="EditPerson" />
+                            <!--<MenuItem Text="Edit" Command="{Binding ListViewModel.EditPerson}" CommandParameter="{Binding}" />-->
                             <MenuItem Text="Delete" Clicked="DeletePerson" />
                             <MenuItem Text="Show" Clicked="Show" />
                         </ViewCell.ContextActions>

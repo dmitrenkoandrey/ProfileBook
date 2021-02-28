@@ -26,6 +26,7 @@ namespace ProfileBook
                 {
                     db.Persons.Add(new Person {NickName = "Andrey", Name = "Andrey Dmitrenko", Description = "Hello, Andrey!", RegDate = "02/24/2021 1:50:23 PM" });
                     db.Persons.Add(new Person { NickName = "Sveta", Name = "Svetlana Dmitrenko", Description = "Hello, Sveta!", RegDate = "01/15/2021 9:45:34 AM" });
+                    db.UserLogins.Add(new UserLogin { UserName = "user", Password = "1234567" });
                     db.SaveChanges();
                 }
             }

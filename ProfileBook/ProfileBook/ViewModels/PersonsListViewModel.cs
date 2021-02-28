@@ -97,14 +97,15 @@ namespace ProfileBook.ViewModels
             
         }
 
-        private void EditPerson(object personObject)
+        private async void EditPerson(object personObject)
         {
             PersonViewModel person = personObject as PersonViewModel;
-            if (person != null)
+            //if (person != null)
             {
-                Persons.Remove(person);
+                // Persons.Remove(person);
+                await Navigation.PushAsync(new AddEditProfileView());
             }
-            Back();
+            //Back();
         }
 
         private void DeletePerson(object personObject)

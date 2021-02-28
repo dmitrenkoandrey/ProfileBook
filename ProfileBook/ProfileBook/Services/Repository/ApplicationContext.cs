@@ -11,7 +11,7 @@ namespace ProfileBook
         private string _databasePath;
 
         public DbSet<Person> Persons { get; set; }
-        public DbSet<UserLogin> userLogins { get; set; }
+        public DbSet<UserLogin> UserLogins { get; set; }
         public ApplicationContext(string databasePath)
         {
             _databasePath = databasePath;

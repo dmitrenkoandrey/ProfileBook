@@ -10,7 +10,8 @@
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="getPhotoItem" Text="GetPhoto" Clicked="GetPhotoAsync" Order="Primary" Priority="1"></ToolbarItem>
-        <ToolbarItem x:Name="takePhotoItem" Text="TakePhoto" Command="{Binding ListViewModel.TakePhotoCommand}" CommandParameter="{Binding}" Order="Primary" Priority="2"></ToolbarItem>
+        <ToolbarItem x:Name="takePhotoItem" Text="TakePhoto" Clicked="TakePhotoAsync" Order="Primary" Priority="2"></ToolbarItem>
+        <!--<ToolbarItem x:Name="takePhotoItem" Text="TakePhoto" Command="{Binding ListViewModel.TakePhotoCommand}" CommandParameter="{Binding}" Order="Primary" Priority="2"></ToolbarItem>-->
         <ToolbarItem x:Name="saveItem" Text="Save" Clicked="SavePerson" Order="Primary" Priority="3"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>

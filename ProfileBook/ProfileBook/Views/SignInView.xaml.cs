@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ProfileBook.Models;
@@ -13,6 +12,7 @@ using ProfileBook.ViewModels;
 using ProfileBook;
 using System.Windows.Input;
 using Xamarin.Essentials;
+using ProfileBook.Services.Repository;
 
 namespace ProfileBook.Views
 {
@@ -20,46 +20,64 @@ namespace ProfileBook.Views
     public partial class SignInView : ContentPage
     {
         private UserLogin userLogin;
+        string dbPath = DependencyService.Get<IPath>().GetDatabasePath(App.DBFILENAME);
         public SignInView()
         {
             userLogin = new UserLogin() { UserName = "" };
             InitializeComponent();
             BindingContext = this;
-
-            entLoginName.SetBinding(Entry.TextProperty, new Binding { Source = userLogin, Path = "UserName" });
-            entPassword.SetBinding(Entry.TextProperty, new Binding { Source = userLogin, Path = "Password" });
+            entLoginName.Text = null;
+            entPassword.Text = null;
+           // entLoginName.SetBinding(Entry.TextProperty, new Binding { Source = userLogin, Path = "UserName" });
+            //entPassword.SetBinding(Entry.TextProperty, new Binding { Source = userLogin, Path = "Password" });
             if (Device.RuntimePlatform == Device.iOS) Padding = new Thickness(0, 20, 0, 0);
         }
 
         private async void btnLogin_Clicked(object sender, EventArgs e)
         {
-            //try
-            //{
-              //  IsBusy = true;
-                //var aServ = new AccountService(App.EndPoint, "");
-                //
-                //App.Pwd = await aServ.Login(userLogin);
-                //IsBusy = false;
+            ApplicationContext db = new ApplicationContext(dbPath);
+            string dblogin;
+            string pwd;
+            //userLogin = db.UserLogins.FirstOrDefault(p=>p.UserName == entLoginName.Text);
+            //pwd = userLogin.Password;
+            if (entLoginName.Text == null || entPassword.Text == null)
+            {
+                await DisplayAlert("Login", "Login и пароль не введены!", "OK");
+                
+                await Navigation.PushAsync(new SignInView());
+            }
+            else
+            {
+                userLogin = db.UserLogins.FirstOrDefault(p => p.UserName == entLoginName.Text);
+                if (userLogin != null) 
+                {
+                    dblogin = userLogin.UserName;
+                    pwd = userLogin.Password;
+                    if ((entLoginName.Text != dblogin) || (entPassword.Text != pwd))
+                    {
+                        await DisplayAlert("Login", "Login и пароль ошибочны!", "OK");
+                        await Navigation.PushAsync(new SignInView());
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(new MainListView());
+                    }
 
-               await Navigation.PushAsync(new MainListView());
-                //await Navigation.PopAsync();
-            //}
-            //catch (Exception ex)
-            //{
-                //IsBusy = false;
-            //}
+                }
+                else
+                {
+                    await DisplayAlert("Login", "Login и пароль ошибочны!", "OK");
+                    await Navigation.PushAsync(new SignInView());
+                }
+                
+            }
+            
+
         }
-        //private async void btnLogup_Clicked(object sender, EventArgs e)
-        //{
-
-        //    Navigation.InsertPageBefore(new SignUpView(), this);
-        //    await Navigation.PopAsync();
-        //}
         public ICommand ClickCommand => new Command<string>((url) =>
         {
-            // Launcher.OpenAsync(new System.Uri(url));
            Navigation.PushAsync(new SignUpView());
-            // Navigation.PopAsync();
+            
         });
     }
 

@@ -8,7 +8,7 @@ namespace ProfileBook.Models
     [Table("UserLogins")]
     public class UserLogin
     {
-        [PrimaryKey, AutoIncrement, Column("_id")]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string UserName { get; set; }
        public string Password { get; set; }

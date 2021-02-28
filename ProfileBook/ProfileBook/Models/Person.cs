@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ProfileBook.TreeView;
 using SQLite;
 
 namespace ProfileBook.Models
@@ -15,5 +16,10 @@ namespace ProfileBook.Models
         public string ProfileImage { get; set; }
         public string Description { get; set; }
         public string RegDate  { get; set; }
+
+        public static explicit operator Person(PersonViewModel v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
