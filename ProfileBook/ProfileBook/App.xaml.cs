@@ -20,7 +20,7 @@ namespace ProfileBook
             using (var db = new ApplicationContext(dbPath))
             {
                 // Создаем бд, если она отсутствует
-                db.Database.EnsureDeleted();
+                //db.Database.EnsureDeleted();
                 db.Database.EnsureCreated();
                 if (db.Persons.Count() == 0)
                 {

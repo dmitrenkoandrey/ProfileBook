@@ -5,10 +5,10 @@ using SQLite;
 
 namespace ProfileBook.Models
 {
-    [Table("Persons")]
+    
     public class Person
     {
-        [PrimaryKey, AutoIncrement, Column("_id")]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string NickName  { get; set; }
         public string Name { get; set; }

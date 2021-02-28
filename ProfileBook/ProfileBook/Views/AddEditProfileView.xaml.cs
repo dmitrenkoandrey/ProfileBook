@@ -17,7 +17,7 @@ namespace ProfileBook.Views
         public Image Img {set; get; }
         
         private PersonViewModel personViewModel;
-        public MainListView mainList = new MainListView();
+        //public MainListView mainList = new MainListView();
         public static string Imagesource { set; get; }
         //public PersonViewModel ViewModel { get; private set; }
         public AddEditProfileView()
@@ -28,6 +28,7 @@ namespace ProfileBook.Views
             InitializeComponent();
             dbPath = DependencyService.Get<IPath>().GetDatabasePath(App.DBFILENAME);
             //var PersListView = new PersonsListViewModel();
+            
             if (PersonsListViewModel.IsBusy1 == false)
             {
                 image1.Source = "pic_profile1.png";
@@ -78,7 +79,7 @@ namespace ProfileBook.Views
             }
            this.Navigation.PushAsync(new MainListView());
         }
-        private void DeletePerson(object sender, EventArgs e)
+        public void DeletePerson(object sender, EventArgs e)
         {
             var person  = (Person)BindingContext;
             using (ApplicationContext db = new ApplicationContext(dbPath))

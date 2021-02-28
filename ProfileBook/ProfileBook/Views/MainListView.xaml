@@ -15,11 +15,16 @@
     </ContentPage.ToolbarItems>
     <!--<ScrollView>-->
     <StackLayout>
-        <ListView x:Name="personsList" ItemsSource="{Binding Persons}"
+        <ListView x:Name="personsList" ItemsSource="{Binding Persons}" ItemSelected="OnItemSelected"
               SelectedItem="{Binding SelectedPerson, Mode=TwoWay}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Edit" Clicked="EditPerson" />
+                            <MenuItem Text="Delete" Clicked="DeletePerson" />
+                            <MenuItem Text="Show" Clicked="Show" />
+                        </ViewCell.ContextActions>
                         <ViewCell.View>
                             <StackLayout Orientation="Horizontal">
                                 <!--<Image Source="{Binding ProfileImage}" HorizontalOptions="Start"/>-->

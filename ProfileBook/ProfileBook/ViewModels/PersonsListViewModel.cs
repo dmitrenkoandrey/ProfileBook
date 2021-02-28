@@ -17,7 +17,7 @@ namespace ProfileBook.ViewModels
     public class PersonsListViewModel : INotifyPropertyChanged
     {
         public Image Img { protected set; get; }
-        public Validator valid = new Validator();
+        //public Validator valid = new Validator();
         public ObservableCollection<PersonViewModel> Persons { get; set; }
         public static bool IsBusy1 { set; get; }
         public event PropertyChangedEventHandler PropertyChanged;
@@ -28,6 +28,7 @@ namespace ProfileBook.ViewModels
         public ICommand BackCommand { protected set; get; }
         public ICommand TakePhotoCommand { protected set; get; }
         public ICommand GetPhotoCommand { protected set; get; }
+        public ICommand EditPersonCommand { protected set; get; }
         PersonViewModel selectedPerson;
         public INavigation Navigation { get; set; }
 
@@ -35,6 +36,7 @@ namespace ProfileBook.ViewModels
         {
             Persons = new ObservableCollection<PersonViewModel>();
             CreatePersonCommand = new Command(CreatePerson);
+            EditPersonCommand = new Command(EditPerson);
             DeletePersonCommand = new Command(DeletePerson);
             SavePersonCommand = new Command(SavePerson);
             TakePhotoCommand = new Command(TakePhotoAsync);
@@ -93,6 +95,16 @@ namespace ProfileBook.ViewModels
            //Back();
           await  Navigation.PopAsync();
             
+        }
+
+        private void EditPerson(object personObject)
+        {
+            PersonViewModel person = personObject as PersonViewModel;
+            if (person != null)
+            {
+                Persons.Remove(person);
+            }
+            Back();
         }
 
         private void DeletePerson(object personObject)
