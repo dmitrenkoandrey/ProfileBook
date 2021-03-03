@@ -14,20 +14,21 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using ProfileBook.Services.Repository;
 using ProfileBook.Services.Authorization;
-namespace ProfileBook.Views
+using ProfileBook.Views;
+
+namespace ProfileBook.Services.Authorization
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SignUpView : ContentPage
+  public  class RegistrationService : ContentPage
     {
+        public Entry entnewLoginName;
+        public Entry entnewPassword;
+        public Entry entconfPassword;
+        public RegistrationService()
+        {
+        }
+        
         string dbPath = DependencyService.Get<IPath>().GetDatabasePath(App.DBFILENAME);
         private UserLogin newuserLogin;
-        public SignUpView()
-        {
-            
-            newuserLogin = new UserLogin() { UserName = "" };
-            InitializeComponent();
-            BindingContext = this;
-        }
         private async void btnLogup_Clicked(object sender, EventArgs e)
         {
 
@@ -56,7 +57,7 @@ namespace ProfileBook.Views
                     }
                     else
                     {
-                        if (entnewPassword.Text.Length <= 4 )
+                        if (entnewPassword.Text.Length <= 4)
                         {
                             await DisplayAlert("Регистрация", "Длина пароля регистрации должна быть больше 4!", "OK");
                             await Navigation.PushAsync(new SignUpView());

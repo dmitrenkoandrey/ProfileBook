@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace ProfileBook.Services.Profile
 {
-  public class ProfileService : IProfileService
+    public class ProfileService :ContentPage, IProfileService
     {
         Image img;
 
-   
+
         public ProfileService()
         {
             img = new Image();
         }
-        async void GetPhotoAsync(object sender, EventArgs e)
+      public  async void GetPhotoAsync(object sender, EventArgs e)
         {
             try
             {
@@ -28,11 +28,11 @@ namespace ProfileBook.Services.Profile
             }
             catch (Exception ex)
             {
-                //await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
+                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
         }
 
-        async void TakePhotoAsync(object sender, EventArgs e)
+     public   async void TakePhotoAsync(object sender, EventArgs e)
         {
             try
             {
@@ -52,7 +52,7 @@ namespace ProfileBook.Services.Profile
             }
             catch (Exception ex)
             {
-                //await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
+                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
         }
 

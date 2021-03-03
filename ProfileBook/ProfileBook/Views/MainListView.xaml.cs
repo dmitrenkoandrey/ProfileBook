@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using ProfileBook.Models;
-using ProfileBook.Service;
+using ProfileBook.Services;
 using ProfileBook.TreeView;
 using ProfileBook.ViewModels;
 using ProfileBook.Services.Repository;
@@ -22,13 +22,13 @@ namespace ProfileBook.Views
         string dbPath = DependencyService.Get<IPath>().GetDatabasePath(App.DBFILENAME);
         public MainListView()
         {
-           
+
             InitializeComponent();
             //this.BindingContext = new PersonsListViewModel();
             logoutItem.IconImageSource = ImageSource.FromFile("logout.png");
             settingsItem.IconImageSource = ImageSource.FromFile("settings.png");
-            BindingContext = this;
-            BindingContext = new PersonsListViewModel() { Navigation = this.Navigation };
+           // BindingContext = this;
+           //BindingContext = new PersonsListViewModel() { Navigation = this.Navigation };
             //IsBusy = false;
 
         }
@@ -37,7 +37,7 @@ namespace ProfileBook.Views
 
         protected override void OnAppearing()
         {
-           //dbPath = DependencyService.Get<IPath>().GetDatabasePath(App.DBFILENAME);
+            //dbPath = DependencyService.Get<IPath>().GetDatabasePath(App.DBFILENAME);
             using (ApplicationContext db = new ApplicationContext(dbPath))
             {
                 personsList.ItemsSource = db.Persons.ToList();
@@ -51,19 +51,19 @@ namespace ProfileBook.Views
             AddEditProfileView personPage = new AddEditProfileView();
             personPage.BindingContext = selectedPerson;
             person1 = selectedPerson;
+ 
             await Navigation.PushAsync(personPage);
         }
         // обработка нажатия кнопки добавления
         private async void CreatePerson(object sender, EventArgs e)
         {
+
             Person person = new Person();
             AddEditProfileView personPage = new AddEditProfileView();
             personPage.BindingContext = person;
             person.RegDate = DateTime.Now.ToString();
-            
             await Navigation.PushAsync(personPage);
         }
-
         async void OnLogoutItemClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SignInView());
@@ -77,7 +77,7 @@ namespace ProfileBook.Views
         {
             await Navigation.PushAsync(new AddEditProfileView());
         }
-        
+
         void OnUserInfoItemClicked(object sender, EventArgs e)
         {
 
@@ -89,14 +89,6 @@ namespace ProfileBook.Views
             if (diaRes) System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
         }
 
-        private async void Show(object sender, EventArgs e)
-        {
-            await DisplayAlert("Показать", "Пункт Show", "OK");
-            var person = person1;
-
-  
-            await Navigation.PushAsync(new MainListView());
-        }
         private async void EditPerson(object sender, EventArgs e)
         {
 
@@ -116,7 +108,7 @@ namespace ProfileBook.Views
             if (delres)
             {
                 var person = person1;
-                 //person = (Person)BindingContext;
+                //person = (Person)BindingContext;
                 using (ApplicationContext db = new ApplicationContext(dbPath))
                 {
                     db.Persons.Remove(person);

@@ -15,7 +15,7 @@
     </ContentPage.ToolbarItems>
     <!--<ScrollView>-->
     <StackLayout>
-        <ListView x:Name="personsList" ItemsSource="{Binding Persons}" ItemSelected="OnItemSelected"
+        <ListView x:Name="personsList" ItemsSource="{Binding Persons}" 
               SelectedItem="{Binding SelectedPerson, Mode=TwoWay}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -24,7 +24,6 @@
                             <MenuItem Text="Edit" Clicked="EditPerson" />
                             <!--<MenuItem Text="Edit" Command="{Binding ListViewModel.EditPerson}" CommandParameter="{Binding}" />-->
                             <MenuItem Text="Delete" Clicked="DeletePerson" />
-                            <MenuItem Text="Show" Clicked="Show" />
                         </ViewCell.ContextActions>
                         <ViewCell.View>
                             <StackLayout Orientation="Horizontal">
@@ -34,8 +33,8 @@
                                     <Label Text="{Binding NickName}" FontSize="Large" />
                                     <Label Text="{Binding Name}" FontSize="Medium" />
                                     <Label Text="{Binding RegDate}" FontSize="Medium" />
-                                <BoxView HeightRequest="1" Color="Red" IsVisible="{Binding IsSeparatorVisible}"/>
-                            </StackLayout>
+                                    <BoxView HeightRequest="1" Color="Red" IsVisible="{Binding IsSeparatorVisible}"/>
+                                </StackLayout>
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>
